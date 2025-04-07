@@ -2,7 +2,7 @@
 <html>
 <head>
 	<!-- This title is used for tabs and bookmarks -->
-	<title>Experiment X - Subject/Topic</title>
+	<title>Experiment 1 - Baby Name Generator</title>
 
 	<!-- Use UTF character set, a good idea with any webpage -->
 	<meta charset="UTF-8" />
@@ -32,14 +32,14 @@
 	<main id="content">
 		<section>
 
-			<h1>Experiment 1 - Subject/Topic</h1>
+			<h1>Experiment 1 - Baby Name Generator</h1>
 
 			<div class="minor-section">
 				<div id="canvas-container">
 					<!-- canvas will be added here -->
 					<div class="minor-section">
-						<button id="clicker">reroll</button>
-						<div id="box"></div>
+						<button id="clicker">Gimme more</button>
+						<div id="box" class="styled-box"></div>
 					</div>
 					
 				</div>
@@ -51,16 +51,33 @@
 			<div class="minor-section">
 				<h2>Description</h2>
 				<p>What are you trying to acomplish with this experiment?</p>
+				<p> 
+					My first experiment is a simple interactive baby name generator that suggests a name based on the perceived or desired gender of a baby. 
+					You can click the "Gimme more" button to generate new suggestions, which randomly inserts male, female, or unisex baby names into a pre-written template. 
+				</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Technical</h2>
 				<p>Describe in detail what you did technically and how it works?</p>
+				<p>
+					The project is built with HTML for structure, CSS for styling, and JavaScript for logic. 
+					A template string contains placeholders like <code>$male_baby</code>, <code>$female_baby</code>, and <code>$unisex_baby</code>. These placeholders are replaced by randomly selected names from predefined arrays.
+					jQuery to handle the button click event. When the "Gimme more" button is clicked, the <code>generate()</code> function replaces the placeholders with actual names and updates the content of the <code>#box</code> div.
+					Each name type is styled with a different color using inline <code>&lt;span&gt;</code> elements. 
+				</p>
 			</div>
 
 			<div class="minor-section">
-				<h2>Reflection</h2>
+				<h2>Reflection</h2>	
 				<p>Each person that worked on the code should reflect on the process, the difficulties, and the successes of the experiment.</p>
+				<p>
+					Honestly this is my first time doing any sort of web dev so I was learning a lot from this. 
+					One challenge was figuring out how to replace multiple placeholders within a single template and apply different styles to them. 
+					There's still a visual bug when you make it fullscreen which I don't know how to solve yet. 
+					I learned how to integrate jQuery for user interaction and use regular expressions for text replacement.
+					Overall, this experiment was a good start on my web dev journey. I am taking notice of the connection between structure (HTML), style (CSS), and behavior (JavaScript) in web development.
+				</p>
 			</div>
 
 		</section>
