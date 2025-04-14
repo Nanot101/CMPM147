@@ -2,7 +2,7 @@
 <html>
 <head>
 	<!-- This title is used for tabs and bookmarks -->
-	<title>Experiment X - Subject/Topic</title>
+	<title>Experiment 2 - Solar System Landscape</title>
 
 	<!-- Use UTF character set, a good idea with any webpage -->
 	<meta charset="UTF-8" />
@@ -23,7 +23,7 @@
 	<!-- Link to javascript files - DEFER waits until all elements are rendered -->
     <script type="text/javascript" src="../js/site.js" DEFER></script>
 	<!-- Use me for a JavaScript OOP Project -->
-	<script type="text/javascript" src="./js/project.js" DEFER></script>
+	<!-- <script type="text/javascript" src="./js/project.js" DEFER></script> -->
 	<!-- Use me for a p5.js project -->
 	<script type="text/javascript" src="./js/sketch.js" DEFER></script>
 </head>
@@ -32,30 +32,60 @@
 	<main id="content">
 		<section>
 
-			<h1>Experiment X - Subject/Topic</h1>
+			<h1>Experiment 2 - Solar System Landscape</h1>
 
 			<div class="minor-section">
 				<div id="canvas-container">
 					<!-- canvas will be added here -->
+					<div class="button-wrapper">
+						<button id="randomizeStars">Randomize Stars</button>
+					</div>
 				</div>
-                <div class="fullscreen-box">
+
+				<!-- The reference image below canvas -->
+				<div id="reference-image" style="text-align:center; margin-top: 20px;">
+					<img src="../img/SolarSys147.jpg" style="max-width: 100%; height: auto;">
+					<p style="color: white;">
+						Image source: <a href="https://www.dreamstime.com/illustration/our-solar-system-sun.html" target="_blank" style="color: #13708f;">Original Image Page</a>
+					</p>
+				</div>
+				
+				<!-- I disabled the fullscreen button bc idk how to adjust the images for fullscreen -->
+                <!-- <div class="fullscreen-box">
                     <button id="fullscreen">Fullscreen</button>
-                </div>
+                </div> -->
 			</div>
 
 			<div class="minor-section">
 				<h2>Description</h2>
-				<p>What are you trying to acomplish with this experiment?</p>
+				<p>
+					In this experiment, I wanted to create a an animated landscape inspired by the solar system. 
+					The scene features the sun at the center with the planets orbiting around it, mimicking orbital dynamics. 
+					For this experiment, I explored how movement, visual layering, and randomness could bring the still image to life. 
+					I also added randomly placed stars in the background and included a button that re-randomizes their position and size.
+				</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Technical</h2>
-				<p>Describe in detail what you did technically and how it works?</p>
+				<p>I used p5.js for my experiment. I first placed the sun in the middle with a dark blue background. Then I made the rest of the planets 
+					and created an array that contains properties that would be essential for the orbit animations. To help visualize the path each planet
+					was going to take, I made dashed lines to represent the orbit path. For random generation, I created the stars and there's a button on
+					top that changes the position and size of the start using random seeds to simulate a change in composition upon pressing the button.
+					For interactivity, I made it so that the planets move in the opposite direction of its orbit path if the mouse cursor "collides" with or
+					hovers on the planet. 
+				</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Reflection</h2>
-				<p>Each person that worked on the code should reflect on the process, the difficulties, and the successes of the experiment.</p>
+				<p>This project helped me understand the fundamentals of generative art and interactivity using p5.js. One challenge I encountered was dealing
+					with layout and layering issues in HTML and CSS. I had problems figuring out the cause of the overlap on the canvas. To be more specific, the 
+					experiment was overlapping with the reference image. So I learned how to properly parent the canvas to a container. I also enjoyed adding motion
+					to the planets and discovering how subtle touches (like orbit rings or hover interactions) make the experience more immersive. I spent the majority
+					of my time figuring out how to have the planets orbit around the sun. Overall, this was a fun and rewarding experiment that combined animation, 
+					interaction, and design in a way that helped solidify my understanding of generative environments.
+				</p>
 			</div>
 
 		</section>
