@@ -80,8 +80,6 @@ function placeTile(i, j, ti, tj) {
 */
 
 
-// === LOOKUP ARRAYS ===
-
 // Dungeon mode lookup array. I picked a few tiles for each.
 const dungeonLookup = {
     wall: [
