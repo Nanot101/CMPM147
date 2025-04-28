@@ -134,9 +134,11 @@ Here is the basic structure with stub or empty files in place.
 │   │   └── style.css
 │   ├── img
 │   ├── js
-│   │   ├── project.js
-│   │   └── sketch.js
+│   │   ├── engine.js
+│   │   └── my_world.js
+│   │   └── xxhash.min.js
 │   └── index.html
+│   └── README.md
 ├── experiment5
 │   ├── css
 │   │   └── style.css
