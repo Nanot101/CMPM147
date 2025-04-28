@@ -1,4 +1,4 @@
-# Infinite Worlds – Assignment 4 (CMPM 147)
+# Infinite Worlds – Assignment 4 (CMPM 147) Artist Statement
 
 This project explores **infinite scrolling worlds** with **variation in space, key, and signs of life** using the p5.js library.  
 Three different ideas were developed to demonstrate these concepts.
@@ -9,8 +9,7 @@ Three different ideas were developed to demonstrate these concepts.
 - **Infinity**: Use arrow keys to scroll infinitely across the world.
 - **Variation in Space**: As you move, the biome changes between Grass, Desert, and Stone.
 - **Variation in Key**: Different keys create different biome layouts relative to the origin.
-- **Signs of Life**: *(Not fully implemented yet.)*  
-
+- **Signs of Life**: Different objects are placed on top of the tile in their respective biome. 
 ### 2. Snowmen
 - **Infinity**: Use arrow keys to scroll infinitely across the world.
 - **Variation in Space**: Snowmen are placed throughout the landscape as you move.

@@ -21,6 +21,8 @@ let snowmen = {};
 let seeds = {};
 let snowballAnimations = {};
 let clicks = {};
+let screenLocked = true;
+
 
 
 
@@ -198,7 +200,6 @@ function drawFindSnowmenTile(i, j) {
         drawSnowman();
         pop();
     }
-    pop();
   
     // Draw snowball animation
     if (snowballAnimations[key]) {
@@ -413,3 +414,23 @@ function easeOutBack(t) {
   const c3 = c1 + 1;
   return 1 + c3 * pow(t - 1, 3) + c1 * pow(t - 1, 2);
 }
+
+window.addEventListener("keydown", function(e) {
+  if (screenLocked) {
+    if(["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", " "].includes(e.key)) {
+      e.preventDefault();
+    }
+  }
+}, { passive: false });
+
+
+window.addEventListener("DOMContentLoaded", (event) => {
+  document.getElementById("toggle-lock").addEventListener("click", () => {
+    screenLocked = !screenLocked;
+    if (screenLocked) {
+      console.log("Screen lock enabled: arrow keys move the world.");
+    } else {
+      console.log("Screen lock disabled: arrow keys scroll the page.");
+    }
+  });
+});
