@@ -80,30 +80,58 @@
 			<div class="minor-section">
 				<h2>Description</h2>
 				<p>
-
+                    "Evolutionary Impressions" is a project where I explore how algorithms can generate art inspired by real images. 
+                    I picked four different images: "Solar System," "Cave," "Crow," and "Ship." When I select an image from the dropdown menu, 
+                    the program starts creating an abstract version of it using simple shapes. It doesn't just draw it outright—instead, it tries 
+                    to evolve the design over time, getting better and better with each frame. I can even adjust the mutation rate with a slider, 
+                    which makes the changes happen faster or slower.
                 </p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Technical</h2>
                 <ol>
-                    <li>This project integrates inspiring images that are selectable from the drop-down on the display page. (This could be three distinct images or one image with three different sets of clues that cause the generator to interpret it in a different way.)</li>
-                    <li>The design object is initialized in inspiration-specific ways. Selecting different inspirations should lead to different behaviors of initDesign.</li>
-                    <li>The design is rendered in a way that can possibly produce results that feel related to the inspiring images. (The 30-second annealing trick should produce images that resemble the inspiring image if we squint.)</li>
-                    <li>The mutation process makes incremental changes to your design. The rate parameter should be implemented in a way that allows the user to almost stop exploration by sliding the rate down to 1%. Your generator must respond to the mutation rate slider.</li>
+                    <li>
+                        This project is built using p5.js, which makes it easy to draw things on the screen and manipulate images. I load four inspiration images, 
+                        and when I pick one, the design generation process begins.
+                      </li>
+                      <li>
+                        <strong>Edge Detection:</strong> I use a technique called Sobel edge detection to find the edges in the inspiration image. 
+                        This helps the program figure out where important lines and shapes are, so it can focus on those areas when placing shapes.
+                      </li>
+                      <li>
+                        <strong>Design Initialization:</strong> At the start, the program places thousands of tiny shapes all over the canvas. It tries to put 
+                        more of them near the edges that it found earlier, so the design starts off with a rough outline of the image.
+                      </li>
+                      <li>
+                        The mutation process slightly changes the size, position, and color of each shape. 
+                        You can adjust how wild the changes are using the mutation rate slider. Lower rates make slower, more subtle changes, while higher rates make bigger, quicker changes.
+                      </li>
+                      <li>
+                        To see how well the current design matches the original, the program calculates a score by comparing the pixels of both images. 
+                        If the new version scores better, it becomes the new best version and gets saved for later viewing.
+                      </li>
                 </ol>
 			</div>
 
 			<div class="minor-section">
 				<h2>Annealing</h2>
-                <p>The most interesting results from this kind of evolutionary generator are often achieved by continually adjusting the mutation rate. Set the slider to 100%, reset the generator, and then slowly drag the slider down to 1% over the period of about 30 seconds. This allows the generator to make large design changes at the start while allowing it to focus on finely details towards the end. This is best done by hand while watching the outputs improve because you can use your human judgment to decide when the generator needs to be making bigger or smaller changes to keep making progress.
-                
+                <p>
+                    The project uses a process similar to "simulated annealing" to slowly improve the generated designs. 
+                    At first, the mutation rate is higher, so the shapes change a lot and explore many possibilities. 
+                    Over time, the changes get smaller and more controlled, allowing the design to settle into a stable version that closely matches the inspiration image. 
+                    This way, the project doesn’t get stuck in a messy or chaotic state and gradually gets better.
                 </p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Reflection</h2>
-				<p>I was a little embrarrassed that I didn't have this wired by the time the assignment came up. But uh, being human.</p>
+				<p>
+                    Working on this project was both exciting and challenging. The coolest part was seeing how the random shapes slowly form something that actually looks like the inspiration image. 
+                    One big challenge was making the design process faster and less laggy, especially when switching between images. 
+                    I learned a lot about how to balance randomness with controlled evolution. 
+                    If I had more time, I’d work on making the transitions smoother and the frame rate higher when switching inspirations.
+                </p>
 			</div>
 
 		</section>
