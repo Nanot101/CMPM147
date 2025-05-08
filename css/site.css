@@ -1,3 +1,17 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+document, body {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(211, 200, 185);
+  font-family: "Open Sans", sans-serif;  
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
 h1, h2 {
   margin: 0;
   padding: 0;
@@ -5,19 +19,26 @@ h1, h2 {
   font-weight: lighter;
 }
 
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  word-spacing: 0.5rem;
+  font-weight: 100;
+}
+
 #content {
   width: calc(100% - 30px);
   margin: 10px;
   padding: 10px;
   border: solid 1px #808;
-  font-family: sans-serif;
 }
 
 .minor-section {
-  margin: 10px;
   padding: 10px;
   border: solid 1px #A0A0A0;
   border-radius: 10px;
+  background-color: rgb(225, 217, 205);
+  margin-bottom: 10px;
 }
 
 .minor-section h2 {
@@ -54,4 +75,25 @@ body.is-fullscreen #canvas-container {
   height: 100vh !important;
   margin: 0; /* Remove any default margins */
   z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Columns - this was originally for the homepage, but I found it useful for other pages as well. */
+
+.two-column {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.two-column>* {
+  min-width: 350px;
+}
+
+.two-column>*:nth-child(1) {
+  flex: 1;
+}
+
+.two-column>*:nth-child(2) {
+  flex: 1;
 }
