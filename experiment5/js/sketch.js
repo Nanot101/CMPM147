@@ -5,7 +5,7 @@ let currentInspiration;
 let currentCanvas;
 let currentInspirationPixels;
 let mutationCount = 0;
-let mutationTimer = 0; // <-- new for adaptive mutation
+let mutationTimer = 0;
 
 function preload() {
   let allInspirations = getInspirations();
@@ -54,7 +54,7 @@ function setup() {
   loadPixels();
   currentInspirationPixels = pixels;
 
-  mutationTimer = 0; // reset on setup
+  mutationTimer = 0;
 }
 
 function evaluate() {
@@ -75,7 +75,7 @@ function memorialize() {
   img.classList.add("memory");
   img.src = url;
   img.width = width;
-  img.height = height; // <- fixed typo from sketch2.js
+  img.height = height;
 
   img.title = currentScore;
   document.getElementById("best").innerHTML = "";
